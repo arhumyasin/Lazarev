@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+   
+   @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+   @import url('https://fonts.googleapis.com/css?family=Roboto:100');
+   @import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+   
+   @mixin button($bcolor,
+   $url,
+   $x1,
+   $y1,
+   $bor,
+   $col) {
+    background: $bcolor;
+    -webkit-mask: url($url);
+    mask: url($url);
+    -webkit-mask-size: $x1 $y1;
+    mask-size: $x1 $y1;
+    border: $bor;
+    color: $col;
+   }
+   
+   .mas {
+       position: absolute;
+       color: #ffff;
+       text-align: center;
+       height: 7vh;
+       width: 15vh;
+       font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+       font-size: 1.7vh;
+       padding-top:1.7vh;
+       font-weight: 600;
+       border-radius: 4vh;
+
+   .mas,i {
+           color: #0DA34E;
+           font-size: 1.7vh;
+   }
+   }
+   
+   @-webkit-keyframes ani {
+    from {
+     -webkit-mask-position: 0 0;
+     mask-position: 0 0;
+    }
+   
+    to {
+     -webkit-mask-position: 100% 0;
+     mask-position: 100% 0;
+    }
+   }
+   
+   @keyframes ani {
+    from {
+     -webkit-mask-position: 0 0;
+     mask-position: 0 0;
+    }
+   
+    to {
+     -webkit-mask-position: 100% 0;
+     mask-position: 100% 0;
+    }
+   }
+   
+   @-webkit-keyframes ani2 {
+    from {
+     -webkit-mask-position: 100% 0;
+     mask-position: 100% 0;
+    }
+   
+    to {
+     -webkit-mask-position: 0 0;
+     mask-position: 0 0;
+    }
+   }
+   
+   @keyframes ani2 {
+    from {
+     -webkit-mask-position: 100% 0;
+     mask-position: 100% 0;
+    }
+   
+    to {
+     -webkit-mask-position: 0 0;
+     mask-position: 0 0;
+    }
+   }
+   
+   a{
+     color:#0DA34E;
+   }
+   
+   .button-container-3 {
+    position: relative;
+    width: 15vh;
+    height: 49px;
+    // margin-left: auto;
+    margin-right: 4vmin;
+    bottom: 0.8vh;
+    overflow: hidden;
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 300;
+    transition: 0.7s;
+    letter-spacing: 1px;
+    border-radius: 4vh;
+    line-height: 2px; 
+    text-transform: uppercase;
+
+    button {
+     width: 101%;
+     height: 100%;
+     font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+     font-weight: 300;
+     font-size: 1.7vh;
+     letter-spacing: 1px;
+     font-weight: bold;
+     text-transform: uppercase;
+     button,i{
+              color: #024720 
+
+     }
+
+     @include button(#0DA34E, "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png",
+     7100%,
+     100%,
+     none,
+     #fff);
+     cursor: pointer;
+     -webkit-animation: ani2 0.7s steps(70) forwards;
+     animation: ani2 0.7s steps(70) forwards;
+   
+     &:hover {
+      -webkit-animation: ani 0.7s steps(70) forwards;
+      animation: ani 0.7s steps(70) forwards;
+     }
+    }
+   }
